@@ -1,0 +1,95 @@
+/*************************************** CSS Reset *****************************************************/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/************************************ Layout Styles ********************************************/
+/* Variables and other root styles */
+:root {
+    --foreground-rgb: 65, 82, 104;
+    --background-rgb: 243, 243, 243;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --foreground-rgb: 243, 243, 243;
+      --background-rgb: 48, 57, 72;
+    }
+  }
+  
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    color: rgb(var(--foreground-rgb));
+    background-color: rgb(var(--background-rgb));
+}
+  
+@font-face {
+    font-family: 'Lobster';
+    src: url(./fonts/Lobster-Regular.ttf);
+}
+
+
+/* Main styles */
+
+nav.navBar {
+    width: 100vw;
+    padding: 1vh 5vw;
+    box-shadow: 0 3px 5px rgba(var(--foreground-rgb), 0.4);
+    position: sticky;
+    top: 0;
+    background-color: rgba(var(--background-rgb), 0.9);
+}
+
+nav.navBar .navBrand {
+    font-family:'Lobster', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2rem;
+}

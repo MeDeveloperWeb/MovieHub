@@ -1,0 +1,92 @@
+.mainCont {
+    width: 75vw;
+    margin: 2vh auto;
+}
+@media screen and (max-width: 1200px) {
+    .mainCont {
+        width: 95vw;
+    }
+}
+.movieListCont {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 2vw 2vw;
+}
+@media screen and (max-width: 992px) {
+    .mainCont {
+        width: 90vw;
+    }
+
+    .movieListCont {
+        grid-template-columns: auto auto auto;
+    }
+}
+@media screen and (max-width: 768px) {
+    .mainCont {
+        width: 75vw;
+    }
+
+    .movieListCont {
+        grid-template-columns: auto auto;
+    }
+}
+@media screen and (max-width: 600px) {
+    .mainCont {
+        width: 98vw;
+    }
+    .movieListCont {
+        grid-template-columns: auto auto;
+    }
+}
+
+.listItem {
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 7px 5px;
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.listItem .imgCont {
+    width: 210px;
+    height: 290px;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    display: flex;
+    border-bottom: 2px solid;
+}
+@media screen and (max-width: 600px) {
+    .listItem .imgCont {
+        width: 168px;
+        height: 232px;
+    }
+}
+
+.listItem .imgCont img {
+    max-width: 100%;
+}
+
+.listItem .movieTitleCont {
+    height: 3rem;
+    justify-content: center;
+    align-content: center;
+    margin-left: 1rem;
+    line-height: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.listItem .movieTitleCont .movieGenre {
+    color: rgba(var(--foreground-rgb), 0.6);
+}
+
+.listItem .movieTitleCont .movieTitle {
+    font-weight: bolder;
+}
