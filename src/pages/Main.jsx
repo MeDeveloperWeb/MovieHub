@@ -8,7 +8,7 @@ function Main() {
 
     const navigate = useNavigate();
 
-    const navigateTo = (movie) => navigate(`/${movie['show']['id']}`, {state: movie});
+    const navigateTo = (movie) => navigate(`/${movie['show']['id']}/${movie['show']['name'].split(' ').join('')}`, {state: movie});
 
     useEffect(() => {
         getMovies().then(data => {
@@ -47,7 +47,7 @@ function Main() {
     )
 }
 
-const getMovies = () => {
+export const getMovies = () => {
     const data = fetch("https://api.tvmaze.com/search/shows?q=all")
     .then(data => data.json())
     return data;

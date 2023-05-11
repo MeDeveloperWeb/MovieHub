@@ -1,0 +1,104 @@
+.movieCont {
+    display: grid;
+    grid-template-columns: 35% auto;
+    padding: 2vh 15vw;
+}
+
+@media screen and (max-width: 1200px) {
+    .movieCont {
+        display: grid;
+        grid-template-columns: 35% auto;
+        padding: 2vh 10vw;
+    }
+}
+@media screen and (max-width: 992px) {
+    .movieCont {
+        padding: 2vh 2vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .movieCont {
+        grid-template-columns: auto;
+    }
+}
+
+.movieImgCont {
+    width: 100%;
+    min-width: 252px;
+    max-width: 420px;
+}
+@media screen and (max-width: 768px) {
+    .movieImgCont {
+        justify-self: center;
+    }
+}
+
+.movieImgCont img {
+    width: 100%;
+}
+
+.movieDetailCont {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 3%;
+    line-height: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.movieDetailCont .movieTitle {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2rem;
+    font-weight: bolder;
+    line-height: 3rem;
+}
+
+.movieDetailCont .movieScore {
+    line-height: 2rem;
+    background-color: rgba(var(--foreground-rgb), 0.8);
+    color: rgb(var(--background-rgb));
+    width: max-content;
+    min-width: 50%;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.movieDetailCont .movieScore img {
+    height: 1rem;
+    margin-right: 5px;
+}
+
+.movieDetailCont .otherMovieDetails {
+    line-height: 4rem;
+}
+.movieDetailCont .btnCont {
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.movieDetailCont .btnCont button {
+    padding: 15px 4rem;
+    background-color: rgba(233, 85, 0, 0.9);
+    border: 2px solid;
+    border-radius: 10px;
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.desCont {
+    margin: 0 3vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.8rem;
+}
+
+.desCont .desTitle {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    line-height: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: 2px solid;
+    margin-bottom: 2rem;
+}

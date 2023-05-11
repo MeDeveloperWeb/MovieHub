@@ -1,12 +1,10 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 function Layout() {
     return (
       <>
         <nav className="navBar">
-            <span className="navBrand">
-                MovieHub
-            </span>
+            <Link className="navBrand" to="/">MovieHub</Link>
         </nav>
         <Outlet />
       </>

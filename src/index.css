@@ -92,4 +92,6 @@ nav.navBar {
 nav.navBar .navBrand {
     font-family:'Lobster', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 2rem;
+    color: rgb(var(--foreground-rgb));
+    text-decoration: none;
 }

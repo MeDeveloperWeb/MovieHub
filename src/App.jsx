@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from './pages/Layout'
 import Main from "./pages/Main";
 import MovieDetail from "./pages/MovieDetail";
+import Form from "./pages/BookTicket";
+
 
 function App() {
   return (
@@ -9,7 +11,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
-          <Route path=":id" element={<MovieDetail />} />
+          <Route path=":id/:name?" element={<MovieDetail />} />
+          <Route path="book/:id" element={<Form />} />
         </Route>
       </Routes>
     </BrowserRouter>
