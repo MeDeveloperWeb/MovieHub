@@ -85,8 +85,12 @@
     font-family:'Courier New', Courier, monospace;
     font-weight: bolder;
     font-size: large;
+    cursor: pointer;
 }
-
+.movieDetailCont .btnCont button:disabled, .movieDetailCont .btnCont button[disabled] {
+    background-color: rgba(11, 150, 11, 0.658);
+    cursor:auto;
+}
 .desCont {
     margin: 0 3vw;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;

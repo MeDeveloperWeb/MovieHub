@@ -1,21 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useContext } from 'react';
 import styles from './Main.module.css'
 import image from './public/no-image.png'
 import { useNavigate } from 'react-router-dom'
+import { DataContext } from './Layout'
 
 function Main() {
-    const [movies, setMovies] = useState([]);
 
     const navigate = useNavigate();
+    const navigateTo = (movie) => navigate(`/${movie['show']['id']}/${movie['show']['name'].split(' ').join('')}`);
 
-    const navigateTo = (movie) => navigate(`/${movie['show']['id']}/${movie['show']['name'].split(' ').join('')}`, {state: movie});
-
-    useEffect(() => {
-        getMovies().then(data => {
-            setMovies(data)
-        })
-    }, [])
-
+    const movies = useContext(DataContext);
     return (
         <div className={styles.mainCont}>
             <div className={styles.movieListCont}>
@@ -45,12 +39,6 @@ function Main() {
             </div>
         </div>
     )
-}
-
-export const getMovies = () => {
-    const data = fetch("https://api.tvmaze.com/search/shows?q=all")
-    .then(data => data.json())
-    return data;
 }
 
 export default Main;

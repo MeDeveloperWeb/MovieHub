@@ -1,0 +1,55 @@
+.formCont {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+.formCont > div {
+    width: max-content;
+    border: 2px solid rgba(var(--foreground-rgb), 0.3);
+    box-sizing: content-box;
+    padding: 5vh 5vw;
+    font-size: 1.3rem;
+    background-color: rgb(var(--foreground-rgb));
+    color: rgb(var(--background-rgb));
+    border-radius: 20px;
+    line-height: 3rem;
+    margin: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .formCont > div {
+        padding: 5vh 2vw;
+    }
+}
+
+.formCont .labelText, label {
+    font-weight: bolder;
+    margin-right: 5px;
+}
+
+.formCont input[type="submit"] {
+    width: max-content;
+    display: flex;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    background-color: rgba(233, 85, 0, 0.9);
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.formCont .showTitle {
+    line-height: 2rem;
+    background-color: rgba(var(--background-rgb), 0.5);
+    color: rgb(var(--foreground-rgb));
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
